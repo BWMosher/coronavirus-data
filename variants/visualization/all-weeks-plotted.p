@@ -8,18 +8,18 @@ set key invert reverse center bmargin maxcols 2 maxrows 5 Left font "arial"
 # set key invert reverse center bmargin maxcols 3 maxrows 5 Left font "arial,23"
 set style fill solid border
 #this smaller boxwidth needed to make the weeks separate when all are shown adjust higher as needed
-set boxwidth .93
+set boxwidth .90
 set yrange [0:100]
 # increase max by one when theres a new week
 set xrange [0.5:22.5]
 # set xlabel "End date of week (Total number of sequenced tests)" offset 0,0
-set xlabel "End date of week (Total sequenced)"
+set xlabel "End date of week (Percent sequenced)" offset 0,1.5
 set ylabel "Percentage"
-set xtics rotate by 37 right
+set xtics rotate by 90 right
 set ytics out mirror
 set mytics 
 set datafile separator ","
-plot '../variant-epi-data.csv' \
+plot '../variant-epi-data-readable.csv' \
 using 7:xtic(1) t "B.1.1.7 (Alpha)" lc rgb "#e01a4f", \
 '' using 15 t "B.1.351 (Beta)" lc rgb "#504884", \
 '' using 11 t "B.1.429 (Epsilon)" lc rgb "#FE9000", \
