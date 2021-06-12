@@ -1,3 +1,14 @@
+# BWMosher's note
+
+- Hi so I'm gonna just plop mine on top of the readme provided by the city
+- There's a human-readable data file called variant-epi-data-readable.csv
+	- It has the dates and percentages sequenced (from cases-sequenced.csv)
+	- I didn't do anything else to it, data the same as the city.
+- There's a folder called visualization/ with my files in there
+	- visualization/all-weeks-plotted.p is gnuplot code. It's free software.
+	- visualization/all-weeks-plotted.png is the resulting image
+
+
 # variants/ 
 
 This folder contains files with data on SARS-CoV-2 variants. It includes information on the number and type of SARS-CoV-2 variants identified in NYC, over time and by modified ZIP Code Tabulation Areas (MODZCTA). All tables containing variant data are updated weekly on Thursday (with data through the previous Saturday). These files are based on a small subset of all confirmed COVID-19 cases; findings may not be representative of all confirmed COVID-19 cases citywide, and should be interpreted with caution. 
