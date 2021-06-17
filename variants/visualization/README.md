@@ -16,7 +16,7 @@
 
 ## images
 
-### the all strains graph from the data from June 10th
+### the all strains graph from the data from June 17th
 
 `all-weeks-plotted.png`
 
