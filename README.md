@@ -1,3 +1,15 @@
+# BWMosher's note
+
+- Hi so I'm gonna just plop mine on top of the readme provided by the city
+- There's a human-readable data file called `variants/variant-epi-data-readable.csv`
+	- It has the dates and percentages sequenced (from `variants/cases-sequenced.csv`)
+	- I didn't do anything else to it, data the same as the city.
+- There's a folder called `variants/visualization/` with my files in there
+	- `variants/visualization/all-weeks-plotted.p` is gnuplot code. It's free software.
+	- `variants/visualization/all-weeks-plotted.png` is the resulting image
+
+---
+
 # NYC Coronavirus Disease 2019 (COVID-19) Data   
 
 This repository contains data on Coronavirus Disease 2019 (COVID-19) in New York City (NYC). The Health Department classifies the start of the COVID-19 outbreak in NYC as the date of the first laboratory-confirmed case, February 29, 2020.  

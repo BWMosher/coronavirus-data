@@ -1,3 +1,15 @@
+# BWMosher's note
+
+- Hi so I'm gonna just plop mine on top of the readme provided by the city
+- There's a human-readable data file called `../variants/variant-epi-data-readable.csv`
+	- It has the dates and percentages sequenced (from `../variants/cases-sequenced.csv`)
+	- I didn't do anything else to it, data the same as the city.
+- There's a folder called `../variants/visualization/` with my files in there
+	- `../variants/visualization/all-weeks-plotted.p` is gnuplot code. It's free software.
+	- `../variants/visualization/all-weeks-plotted.png` is the resulting image
+
+---
+
 # latest/ 
 
 This folder contains files with data that focus on the most recent period of the outbreak. It includes daily 7-day cumulative percent positivity for the molecular test by modified ZIP Code Tabulation Areas (MODZCTA), daily 28-day counts and rates of hospitalizations and deaths by MODZCTA, and trend data that cover the most recent 90 days.

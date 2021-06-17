@@ -1,13 +1,14 @@
 # BWMosher's note
 
 - Hi so I'm gonna just plop mine on top of the readme provided by the city
-- There's a human-readable data file called variant-epi-data-readable.csv
-	- It has the dates and percentages sequenced (from cases-sequenced.csv)
+- There's a human-readable data file called `variant-epi-data-readable.csv`
+	- It has the dates and percentages sequenced (from `cases-sequenced.csv`)
 	- I didn't do anything else to it, data the same as the city.
-- There's a folder called visualization/ with my files in there
-	- visualization/all-weeks-plotted.p is gnuplot code. It's free software.
-	- visualization/all-weeks-plotted.png is the resulting image
+- There's a folder called `visualization/` with my files in there
+	- `visualization/all-weeks-plotted.p` is gnuplot code. It's free software.
+	- `visualization/all-weeks-plotted.png` is the resulting image
 
+---
 
 # variants/ 
 

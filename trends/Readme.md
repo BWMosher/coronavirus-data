@@ -1,3 +1,15 @@
+# BWMosher's note
+
+- Hi so I'm gonna just plop mine on top of the readme provided by the city
+- There's a human-readable data file called `../variants/variant-epi-data-readable.csv`
+	- It has the dates and percentages sequenced (from `../variants/cases-sequenced.csv`)
+	- I didn't do anything else to it, data the same as the city.
+- There's a folder called `../variants/visualization/` with my files in there
+	- `../variants/visualization/all-weeks-plotted.p` is gnuplot code. It's free software.
+	- `../variants/visualization/all-weeks-plotted.png` is the resulting image
+
+---
+
 # trends/ 
 
 This folder contains files with daily, weekly, and monthly data shown across time. Note that these trend data are published by date of event, not by date of report. The Health Department recommends against interpreting daily changes to these files as one day’s worth of data, due to the difference between date of event and date of report.
