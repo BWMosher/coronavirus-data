@@ -1,6 +1,6 @@
 set terminal png linewidth 2 font "arial,28" size 2000,2000 background "#eeeeee"
 set output 'disregarded-variants-through-may23.png'
-set title "Disregarded (June 10 change) NYC Covid Variant percentages from Feb 8 to May 23  \n Pandemic Response Lab Sequencing \n chart by BWMosher: tinyurl.com/bwmosher-github-covid" font "arial,33"
+set title "Disregarded (June 10 change) NYC Covid Variant percentages from Feb 8 to May 23  \n Pandemic Response Lab Sequencing \n chart by BWMosher: tinyurl.com/mosher-github" font "arial,33"
 set style data histogram
 set style histogram rowstacked
 set key invert reverse center bmargin maxcols 3 maxrows 5 Left font "arial,23"
