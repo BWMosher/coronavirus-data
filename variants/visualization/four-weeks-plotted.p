@@ -28,7 +28,7 @@ using 7:xtic(1) t "B.1.1.7 (Alpha)" lc rgb "#e01a4f", \
 '' using 17 t "B.1.617.2 (Delta)" lc rgb "#BFB23E", \
 '' using 19 t "Other" lc rgb "#888888", \
 'var-dates.csv' w impulse lc rgb "#00CC00" lw 5 notitle, \
-'release-date.csv' w impulse lc rgb "#CC0000" lw 5 t "Release Date"
+'release-date.csv' w impulse lc rgb "#CC0000" lw 5 t "Release Date Jun 17"
 
 # spares
 # '' using - t "B.1.526.1" lc rgb "#035380", \

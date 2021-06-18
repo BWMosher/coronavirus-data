@@ -1,9 +1,10 @@
 #
 # this is release-date.csv
 # this is for placing the marker of the release date.
-# it is currently at 16.5 plus three sevenths
+# it is at the number corresponding to the right edge minus two sevenths
 # each seventh is one day because each histogram bar is a 7d period
 # .15 is the height of the marker, 15% up in the graph
 # x y
 # if again a wednesday just add one
-25,15
+# currently 24.5 (sat) +5/7
+25.214286,15
