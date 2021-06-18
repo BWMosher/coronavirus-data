@@ -9,7 +9,7 @@ set style fill solid border
 set boxwidth .80
 set yrange [0:100]
 # increase max by one when theres a new week
-set xrange [19.5:25.5]
+set xrange [19.5:25.7]
 # set xlabel "End date of week (Total number of sequenced tests)" offset 0,0
 set xlabel "End date of week (Total number of sequenced tests)" offset 0,1.5
 set ylabel "Percentage"
