@@ -21,7 +21,7 @@
 
 ## Images
 
-### The all strains graph from January 2nd to June 17th
+### The all strains graph from January 2nd to June 24th
 
 `all-weeks-plotted.png`
 
