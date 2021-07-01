@@ -19,9 +19,9 @@
   city display would look like if it were using a one week window instead of
   a four week window.
 
-## Images
+## Images (updated 2021-07-01)
 
-### The all strains graph from January 2nd to June 24th
+### The all strains graph from January 2nd to Today
 
 `all-weeks-plotted.png`
 
@@ -33,11 +33,11 @@
 
 ![four-weeks-plotted.png](four-weeks-plotted.png)
 
-### The selected variants from only the last week
+<!-- ### The selected variants from only the last week -->
 
-`last-1-week.png`
+<!-- `last-1-week.png` -->
 
-![spoofs/last-1-week.png](spoofs/last-1-week.png)
+<!-- ![spoofs/last-1-week.png](spoofs/last-1-week.png) -->
 
 ### The strains excluded from the data from June 10th (that we were previously monitoring)
 
