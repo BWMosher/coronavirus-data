@@ -17,9 +17,9 @@
 		- Note the top of the graph reaches 10% and this is not the same as other graphs you might see from me.
 - The folder below, `visualization/spoofs` contains my simulations of what the
   city display would look like if it were using a one week window instead of
-  a four week window.
+  a four week window. **I haven't been updating this.**
 
-## Images (updated 2021-07-01)
+## Images (updated 2021-07-15)
 
 ### The all strains graph from January 2nd to Today
 

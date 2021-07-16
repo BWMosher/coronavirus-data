@@ -11,6 +11,7 @@ set yrange [0:100]
 # increase max and min by one when theres a new week
 # do not forget to increment ./release-date.csv and ./var-dates.csv, `gf` there with vim, `C-o` back
 set xrange [23.5:29.7]
+# also ./README.md
 # set xlabel "End date of week (Total number of sequenced tests)" offset 0,0
 set xlabel "End date of week (Total number of sequenced tests)" offset 0,1.5
 set ylabel "Percentage"
