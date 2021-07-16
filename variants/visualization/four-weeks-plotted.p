@@ -1,6 +1,6 @@
 set terminal png linewidth 2 font "arial,28" size 2000,2000 background "#eeeeee"
 set output 'four-weeks-plotted.png'
-set title "Selected NYC Covid Variant percentages from May 9 to Jul 01 (Red line)  \n Pandemic Response Lab Sequencing, Updated Jul 01  \n chart by BWMosher: https://tinyurl.com/mosher-github" font "arial,33"
+set title "Selected NYC Covid Variant percentages from May 9 to Jul 8 (Red line)  \n Pandemic Response Lab Sequencing, Updated Jul 8  \n chart by BWMosher: https://tinyurl.com/mosher-github" font "arial,33"
 set style data histogram
 set style histogram rowstacked
 set key invert reverse center bmargin maxcols 2 maxrows 5 Left font "arial"
@@ -9,7 +9,7 @@ set style fill solid border
 set boxwidth .80
 set yrange [0:100]
 # increase max and min by one when theres a new week
-set xrange [21.5:27.7]
+set xrange [22.5:28.7]
 # set xlabel "End date of week (Total number of sequenced tests)" offset 0,0
 set xlabel "End date of week (Total number of sequenced tests)" offset 0,1.5
 set ylabel "Percentage"
