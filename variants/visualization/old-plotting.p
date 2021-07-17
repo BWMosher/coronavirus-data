@@ -1,5 +1,5 @@
 set terminal png linewidth 2 font "arial,28" size 2000,2000 background "#eeeeee"
-set output 'old-weeks-plotted.png'
+set output 'history/2021-06-17-all-weeks.png'
 set title "Selected NYC Covid Variant percentages from Jan 2 to Jul 3 \n Pandemic Response Lab Sequencing, Updated Jul 15 \n chart by BWMosher: https://tinyurl.com/mosher-github" font "arial,33"
 set style data histogram
 set style histogram rowstacked
@@ -17,7 +17,7 @@ set xtics rotate by 90 right
 set ytics out mirror
 set datafile separator ","
 set mytics 
-plot '../history/2021-07-01-readable.csv' \
+plot '../history/2021-06-17-readable.csv' \
 using 7:xtic(1) t "B.1.1.7 (Alpha)" lc rgb "#e01a4f", \
 '' using 15 t "B.1.351 (Beta)" lc rgb "#504884", \
 '' using 11 t "B.1.429 (Epsilon)" lc rgb "#FE9000", \
