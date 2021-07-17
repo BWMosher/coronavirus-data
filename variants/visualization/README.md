@@ -27,7 +27,7 @@
 
 ![all-weeks-plotted.png](all-weeks-plotted.png)
 
-### The all strains graph animated for the last three weeks.
+### The all strains graph animated for the last five weeks.
 
 Notice the changes
 ![animation.gif](animation.gif)
