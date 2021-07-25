@@ -1,16 +1,17 @@
 set terminal png linewidth 2 font "arial,28" size 2000,2000 background "#eeeeee"
 set output 'four-weeks-plotted.png'
-set title "Selected NYC Covid Variant percentages from May 9 to Jul 15 (Red line)  \n Pandemic Response Lab Sequencing, Updated Jul 15  \n chart by BWMosher: https://tinyurl.com/mosher-github" font "arial,33"
+# dont make a mistake in the title
+set title "Selected NYC Covid Variant percentages from Jun 12 to Jul 22 (Red line)  \n Pandemic Response Lab Sequencing, Updated Jul 22  \n chart by BWMosher: https://tinyurl.com/mosher-github" font "arial,33"
 set style data histogram
 set style histogram rowstacked
-set key invert reverse center bmargin maxcols 2 maxrows 5 Left font "arial"
+set key invert reverse center bmargin maxcols 2 maxrows 6 Left font "arial"
 set style fill solid border
 #this smaller boxwidth needed to make the weeks separate when all are shown adjust higher as needed
 set boxwidth .80
 set yrange [0:100]
 # increase max and min by one when theres a new week
 # do not forget to increment ./release-date.csv and ./var-dates.csv, `gf` there with vim, `C-o` back
-set xrange [23.5:29.7]
+set xrange [24.5:30.7]
 # also ./README.md
 # set xlabel "End date of week (Total number of sequenced tests)" offset 0,0
 set xlabel "End date of week (Total number of sequenced tests)" offset 0,1.5
@@ -28,7 +29,8 @@ using 7:xtic(1) t "B.1.1.7 (Alpha)" lc rgb "#e01a4f", \
 '' using 3 t "B.1.526 (Iota) E484K Pos" lc rgb "#058ed9", \
 '' using 5 t "B.1.526 (Iota) E484K Neg" lc rgb "#0581C5", \
 '' using 17 t "B.1.617.2 (Delta)" lc rgb "#BFB23E", \
-'' using 19 t "Other" lc rgb "#888888", \
+'' using 19 t "B.1.621 (Spicy Cheddar Flavor)" lc rgb "#9B581C", \
+'' using 21 t "Other" lc rgb "#888888", \
 'var-dates.csv' w impulse lc rgb "#00CC00" lw 5 notitle, \
 'release-date.csv' w impulse lc rgb "#CC0000" lw 5 t "Release Date Jul 01"
 

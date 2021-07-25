@@ -1,6 +1,6 @@
 set terminal png linewidth 2 font "arial,28" size 2000,2000 background "#eeeeee"
 set output 'all-weeks-plotted.png'
-set title "Selected NYC Covid Variant percentages from Jan 2 to Jul 3 \n Pandemic Response Lab Sequencing, Updated Jul 15 \n chart by BWMosher: https://tinyurl.com/mosher-github" font "arial,33"
+set title "Selected NYC Covid Variant percentages from Jan 2 to Jul 10 \n Pandemic Response Lab Sequencing, Updated Jul 22 \n chart by BWMosher: https://tinyurl.com/mosher-github" font "arial,33"
 set style data histogram
 set style histogram rowstacked
 set key invert reverse center bmargin maxcols 2 maxrows 5 Left font "arial"
@@ -9,7 +9,7 @@ set style fill solid border
 set boxwidth .90
 set yrange [0:100]
 # increase max by one when theres a new week
-set xrange [0.5:27.5]
+set xrange [0.5:28.5]
 # set xlabel "End date of week (Total number of sequenced tests)" offset 0,0
 set xlabel "End date of week (Total number of sequenced tests)" offset 0,1.5
 set ylabel "Percentage"
@@ -26,7 +26,8 @@ using 7:xtic(1) t "B.1.1.7 (Alpha)" lc rgb "#e01a4f", \
 '' using 3 t "B.1.526 (Iota) E484K Pos" lc rgb "#058ed9", \
 '' using 5 t "B.1.526 (Iota) E484K Neg" lc rgb "#0581C5", \
 '' using 17 t "B.1.617.2 (Delta)" lc rgb "#BFB23E", \
-'' using 19 t "Other" lc rgb "#888888"
+'' using 19 t "B.1.621 (Spicy Cheddar Flavor)" lc rgb "#9B581C", \
+'' using 21 t "Other" lc rgb "#888888"
 
 # spares
 # '' using - t "B.1.526.1" lc rgb "#035380", \

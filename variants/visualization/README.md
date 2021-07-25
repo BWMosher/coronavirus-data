@@ -19,7 +19,7 @@
   city display would look like if it were using a one week window instead of
   a four week window. **I haven't been updating this.**
 
-## Images (updated 2021-07-15)
+## Images (updated 2021-07-25)
 
 ### The all strains graph from January 2nd to Today
 
