@@ -29,7 +29,7 @@ using 7:xtic(1) t "B.1.1.7 (Alpha)" lc rgb "#e01a4f", \
 '' using 3 t "B.1.526 (Iota) E484K Pos" lc rgb "#058ed9", \
 '' using 5 t "B.1.526 (Iota) E484K Neg" lc rgb "#0581C5", \
 '' using 17 t "B.1.617.2 (Delta)" lc rgb "#BFB23E", \
-'' using 19 t "B.1.621 (Spicy Cheddar Flavor)" lc rgb "#9B581C", \
+'' using 19 t "B.1.621 (Tangy Cheddar Flavor)" lc rgb "#9B581C", \
 '' using 21 t "Other" lc rgb "#888888", \
 'var-dates.csv' w impulse lc rgb "#00CC00" lw 5 notitle, \
 'release-date.csv' w impulse lc rgb "#CC0000" lw 5 t "Release Date Jul 01"
