@@ -19,7 +19,7 @@
   city display would look like if it were using a one week window instead of
   a four week window. **I haven't been updating this.**
 
-## Images (updated 2021-07-25)
+## Images (updated 2021-07-30)
 
 ### The all strains graph from January 2nd to Today
 
@@ -31,11 +31,11 @@
 Note: For the last few weeks, I have been calculating the percentages to several
 decimal points of precision that the city has been rounding off.
 
-![animation.gif](history/2021-07-22-gif/2021-07-22.gif)
+![animation.gif](history/2021-07-29-gif/2021-07-29.gif)
 
 ### The all strains graph animated for the last seven weeks, using counts.
 
-![animation.gif](history/raw/2021-07-22-raw.gif)
+![animation.gif](history/raw/2021-07-29/2021-07-29.gif)
 
 ### The last four weeks graph
 
