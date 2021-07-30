@@ -1,7 +1,7 @@
 set terminal png linewidth 2 font "arial,28" size 2000,2000 background "#eeeeee"
 set output 'four-weeks-plotted.png'
 # dont make a mistake in the title
-set title "Selected NYC Covid Variant percentages from Jun 12 to Jul 22 (Red line)  \n Pandemic Response Lab Sequencing, Updated Jul 22  \n chart by BWMosher: https://tinyurl.com/mosher-github" font "arial,33"
+set title "Selected NYC Covid Variant percentages from Jun 19 to Jul 29 (Red line)  \n Pandemic Response Lab Sequencing, Updated Jul 29  \n chart by BWMosher: https://tinyurl.com/mosher-github" font "arial,33"
 set style data histogram
 set style histogram rowstacked
 set key invert reverse center bmargin maxcols 2 maxrows 6 Left font "arial"
@@ -11,7 +11,7 @@ set boxwidth .80
 set yrange [0:100]
 # increase max and min by one when theres a new week
 # do not forget to increment ./release-date.csv and ./var-dates.csv, `gf` there with vim, `C-o` back
-set xrange [24.5:30.7]
+set xrange [25.5:31.7]
 # also ./README.md
 # set xlabel "End date of week (Total number of sequenced tests)" offset 0,0
 set xlabel "End date of week (Total number of sequenced tests)" offset 0,1.5
@@ -32,8 +32,7 @@ using 7:xtic(1) t "B.1.1.7 (Alpha)" lc rgb "#e01a4f", \
 '' using 19 t "B.1.621 (Tangy Cheddar Flavor)" lc rgb "#9B581C", \
 '' using 21 t "Other" lc rgb "#888888", \
 'var-dates.csv' w impulse lc rgb "#00CC00" lw 5 notitle, \
-'release-date.csv' w impulse lc rgb "#CC0000" lw 5 t "Release Date Jul 01"
-
+'release-date.csv' w impulse lc rgb "#CC0000" lw 5 t "Release Date Jul 29"
 # remember to change the release date
 
 # spares
