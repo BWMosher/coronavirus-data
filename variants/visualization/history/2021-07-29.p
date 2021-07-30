@@ -1,9 +1,9 @@
 set terminal png linewidth 2 font "arial,28" size 2000,2000 background "#eeeeee"
-set output '2021-06-10-all-weeks.png'
+set output '2021-07-29-all-weeks.png'
 set title "Selected NYC Covid Variant percentages from Jan 2 to Jul 17 \n Pandemic Response Lab Sequencing, Updated Jul 29 \n chart by BWMosher: https://tinyurl.com/mosher-github" font "arial,33"
 set style data histogram
 set style histogram rowstacked
-set key invert reverse center bmargin maxcols 2 maxrows 6 Left font "arial"
+set key invert reverse center bmargin maxcols 2 maxrows 5 Left font "arial"
 set style fill solid border
 #this smaller boxwidth needed to make the weeks separate when all are shown adjust higher as needed
 set boxwidth .90
@@ -17,7 +17,7 @@ set xtics rotate by 90 right
 set ytics out mirror
 set datafile separator ","
 set mytics 
-plot '../../history/2021-06-10-readable.csv' \
+plot '../../history/2021-07-29-readable.csv' \
 using 7:xtic(1) t "B.1.1.7 (Alpha)" lc rgb "#e01a4f", \
 '' using 15 t "B.1.351 (Beta)" lc rgb "#504884", \
 '' using 11 t "B.1.429 (Epsilon)" lc rgb "#FE9000", \
@@ -26,8 +26,8 @@ using 7:xtic(1) t "B.1.1.7 (Alpha)" lc rgb "#e01a4f", \
 '' using 3 t "B.1.526 (Iota) E484K Pos" lc rgb "#058ed9", \
 '' using 5 t "B.1.526 (Iota) E484K Neg" lc rgb "#0581C5", \
 '' using 17 t "B.1.617.2 (Delta)" lc rgb "#BFB23E", \
-'../../history/zeroes.csv' using 2  t "B.1.621 (Tangy Cheddar Flavor)" lc rgb "#9B581C", \
-'../../history/2021-06-10-readable.csv' using 19 t "Other" lc rgb "#888888"
+'' using 19 t "B.1.621 (Tangy Cheddar Flavor)" lc rgb "#9B581C", \
+'' using 21 t "Other" lc rgb "#888888"
 
 # spares
 # '' using - t "B.1.526.1" lc rgb "#035380", \
@@ -49,4 +49,3 @@ using 7:xtic(1) t "B.1.1.7 (Alpha)" lc rgb "#e01a4f", \
 # "B.1.617.2 percent":17
 # "Other percent":19
 # "incomplete":20
-
