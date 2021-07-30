@@ -27,9 +27,15 @@
 
 ![all-weeks-plotted.png](all-weeks-plotted.png)
 
-### The all strains graph animated for the last seven weeks.
+### The all strains graph animated for the last seven weeks, using percentage.
+Note: For the last few weeks, I have been calculating the percentages to several
+decimal points of precision that the city has been rounding off.
 
-![animation.gif](animation.gif)
+![animation.gif](history/2021-07-22-gif/2021-07-22.gif)
+
+### The all strains graph animated for the last seven weeks, using counts.
+
+![animation.gif](history/raw/2021-07-22-raw.gif)
 
 ### The last four weeks graph
 
