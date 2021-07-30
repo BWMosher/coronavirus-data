@@ -1,8 +1,8 @@
 MEASURE,DAILY_AVG_7DAY,DAILY_AVG_28DAY,LAST_7_DAY,WEEKLY_AVG_LAST_4_WKS,TOTAL
-Percent Positivity,1.96,1.37,1.96,1.24,
-Cases,480,294,3361,2055,794816
-Probable Cases,188,102,1313,717,170121
-Total Cases,668,396,4674,2772,964937
-Hospitalizations,28,24,197,166,110410
-Confirmed Deaths,3,4,20,26,28396
-"Updated: July 22, at 1 p.m.",,,,,
+Percent Positivity,2.62,1.97,2.62,1.8,
+Cases,733,444,5129,3108,800064
+Probable Cases,300,168,2098,1175,172216
+Total Cases,1032,612,7227,4283,972280
+Hospitalizations,24,25,166,178,110645
+Confirmed Deaths,2,3,15,23,28417
+"Updated: July 29, at 1 p.m.",,,,,
