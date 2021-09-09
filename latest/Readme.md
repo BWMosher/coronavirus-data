@@ -15,12 +15,40 @@
 This folder contains files with data that focus on the most recent period of the outbreak. It includes daily 7-day cumulative percent positivity for the molecular test by modified ZIP Code Tabulation Areas (MODZCTA), daily 28-day counts and rates of hospitalizations and deaths by MODZCTA, and trend data that cover the most recent 90 days.
 
 ## Files 
+### breakthrough-summary.csv
+This file contains cumulative counts and average weekly rates of cases, hospitalizations, and deaths by vaccination status,  since January 17, 2021. Data are updated on Thursdays containing data through the Saturday 12 days prior.
+
+It includes the following definitions:
+- "Vaccinated" means people who are fully vaccinated at the time of case diagnosis: 14 days after the administration of the 2nd dose in a 2-dose series, or after the administration of a single-dose vaccine. 
+- "Unvaccinated" means there is no record of this patient's vaccination status.
+- Cases, hospitalization, and deaths: defined per this repository's common standards.
+- Rates are per 100,000 people. Hospitalization and death rates are age-adjusted. The denominator for average weekly rates for vaccinated people is the count of NYC residents recorded as fully vaccinated by the week of an event (case, hospitalization, or death) included in the rate; the denominator for unvaccinated people is the total city population minus the number of fully or partially vaccinated people  as of the week of event. 
+
+### now-weekly-breakthrough.csv
+This file contains weekly counts and rates of cases and hospitalizations by vaccination status, and citywide. Data are updated on Thursdays containing data through the Saturday 12 days prior.
+
+Definitions of vaccinated and unvaccinated people are the same as for breakthrough-summary.csv.
+
+
+| Variable name          | Definition                                                                | Timeframe                                |
+|------------------------|---------------------------------------------------------------------------|------------------------------------------|
+| Week_of_diagnosis      | Week-ending date                                                          |                                          |
+| vax_case_count         | Count of cases diagnosed among fully vaccinated people                    | Full week preceding the week-ending date |
+| vax_case_rate          | Rate of cases diagnosed per 100,000 fully vaccinated people               | Full week preceding the week-ending date |
+| vax_hosp_count         | Count of hospitalizations among fully vaccinated people                   | Full week preceding the week-ending date |
+| vax_hosp_rate_adj      | Age-adjusted rate of hospitalizations per 100,000 fully vaccinated people | Full week preceding the week-ending date |
+| unvax_case_count       | Count of cases diagnosed among unvaccinated people                        | Full week preceding the week-ending date |
+| unvax_case_rate        | Rate of cases diagnosed per 100,000 unvaccinated people                   | Full week preceding the week-ending date |
+| unvax_hosp_count       | Count of hospitalizations among unvaccinated people                       | Full week preceding the week-ending date |
+| unvax_hosp_rate_adj    | Age-adjusted rate of hospitalizations per 100,000 unvaccinated people     | Full week preceding the week-ending date |
+| citywide_case_rate     | Rate of cases diagnosed per 100,000 people citywide                       | Full week preceding the week-ending date |
+| citywide_hosp_rate_adj | Age-adjusted rate of hospitalizations per 100,000 people citywide         | Full week preceding the week-ending date |
 
 ### hosp_death_last28days-by-modzcta.csv
 
-This file contains counts and rates of hospitalizations and confirmed deaths, by MODZCTA. Please see the technical notes for a description of MODZCTA ([Geography: Zip codes and ZCTAs](https://github.com/nychealth/coronavirus-data#geography-zip-codes-and-zctas)). 
+This file contains counts and rates of hospitalizations and deaths, by MODZCTA. Please see the technical notes for a [description of MODZCTA](https://github.com/nychealth/coronavirus-data#geography). 
 
-Indicators, which are calculated for the most recent 28-days at a 14-day lag, include:
+Indicators include:
 
 | Variable Name | Definition | Timeframe  | 
 |-------------------------|------------------------------------------------------------------------------------|----------------------------------------------------| 
@@ -31,11 +59,11 @@ Indicators, which are calculated for the most recent 28-days at a 14-day lag, in
 | LONG | Longitude of the central point within the MODZCTA | |
 | HOSPITALIZATION_COUNT_28DAY | Number of hospitalized cases by MODZCTA | Cumulative across current day and 27 previous days |
 | HOSPITALIZATION_RATE_28DAY | Rate of hospitalized cases per 100,000 people by MODZCTA | Cumulative across current day and 27 previous days |
-| DEATH_COUNT_28DAY | Number of confirmed deaths by MODZCTA | Cumulative across current day and 27 previous days |
-| DEATH_RATE_28DAY | Rate of confirmed deaths per 100,000 people by MODZCTA | Cumulative across current day and 27 previous days |
+| DEATH_COUNT_28DAY | Number of deaths by MODZCTA | Cumulative across current day and 27 previous days |
+| DEATH_RATE_28DAY | Rate of deaths per 100,000 people by MODZCTA | Cumulative across current day and 27 previous days |
 | DATERANGE | Range of dates included in the most recent 28 days | | 
 
-The rate of hospitalized cases per 100,000 people (HOSPITALIZATION_RATE_28DAY) is suppressed for a specific MODZCTA when the HOSPITALIZATION_COUNT_28DAY is between 1 and 5 due to imprecise and unreliable estimates. Both the rate of confirmed deaths per 100,000 people (DEATH_RATE_28DAY) and count (DEATH_COUNT_28DAY) are suppressed for a specific MODZCTA when DEATH_COUNT_28DAY is between 1 and 5 due to imprecise and unreliable estimates and also to protect patient confidentiality. 
+The rate of hospitalized cases per 100,000 people (HOSPITALIZATION_RATE_28DAY) is suppressed for a specific MODZCTA when the HOSPITALIZATION_COUNT_28DAY is between 1 and 5 due to imprecise and unreliable estimates. Both the rate of deaths per 100,000 people (DEATH_RATE_28DAY) and count (DEATH_COUNT_28DAY) are suppressed for a specific MODZCTA when DEATH_COUNT_28DAY is between 1 and 5 due to imprecise and unreliable estimates and also to protect patient confidentiality. 
 
 Neighborhood names represent the [Neighborhood Organizing Census Committee](https://www1.nyc.gov/site/census/index.page) boundaries, which were recently developed by the U.S. Census Bureau with input from community groups.
 
@@ -45,12 +73,12 @@ Note that sum of counts in this file may not match values in citywide tables bec
 
 ### last7days-by-modzcta.csv
 
-This file contains person-level information on molecular testing: the number of people who received a test, the number of people with positive results, the percentage of people tested who tested positive, and the median rate of testing per 100,000 people, stratified by MODZCTA. Please see the technical notes for a description of MODZCTA ([Geography: Zip codes and ZCTAs](https://github.com/nychealth/coronavirus-data#geography-zip-codes-and-zctas)), the different [types of COVID-19 laboratory tests](https://github.com/nychealth/coronavirus-data#laboratory-testing), and details on the [calculation of percent positivity](https://github.com/nychealth/coronavirus-data#calculation-of-percent-positivity). The dates shown in this table reflect the date of specimen collection (i.e., when someone went to a healthcare provider for a test). Please note that the number of people with positive results does not include people who previously tested positive.
+This file contains person-level information on molecular testing: the number of people who received a test, the number of people with positive results, the percentage of people tested who tested positive, and the median rate of testing per 100,000 people, stratified by MODZCTA. Please see the technical notes for a [description of MODZCTA](https://github.com/nychealth/coronavirus-data#geography), the different [types of COVID-19 laboratory tests](https://github.com/nychealth/coronavirus-data#laboratory-testing), and details on the [calculation of percent positivity](https://github.com/nychealth/coronavirus-data#calculation-of-percent-positivity). The dates shown in this table reflect the date of specimen collection (i.e., when someone went to a healthcare provider for a test). Please note that the number of people with positive results does not include people who previously tested positive.
 
-Indicators, which are calculated for the most recent 7-days, include:
+Indicators include:
 
 | Variable Name | Definition | Timeframe  | 
-|-------------------------|------------------------------------------------------------------------------------|----------------------------------------------------| 
+|-------------------------|------------------------------------------------------------------------------------|---------------------------------------------| 
 | MODZCTA | MODZCTA | |          
 | MODZCTA_NAME | Neighborhood name of the MODZCTA | |  
 | LABEL | List of the ZCTAs that are bundled into the MODZCTA | |   
@@ -72,10 +100,6 @@ Unlike other data in this repository, this file excludes patients in congregate 
 ### now-cases-by-day.csv 
 
 This file contains the same data as cases-by-day.csv, but limited to the most recent 90 days. For details, please visit [Trends/Readme/cases-by-day.csv](https://github.com/nychealth/coronavirus-data/tree/master/trends#cases-by-daycsv) 
-
-### now-covid-like-illness.csv 
-
-This file contains the same data as covid-like-illness.csv, but limited to the most recent 90 days. For details, please visit [Trends/Readme/covid-like-illness.csv](https://github.com/nychealth/coronavirus-data/blob/master/trends/Readme.md#covid-like-illnesscsv) 
 
 ### now-data-by-day.csv 
 
@@ -114,10 +138,26 @@ This file contains the same data as testing-by-age.csv, but limited to the most 
 
 This file contains the same data as tests.csv, but limited to the most recent 90 days. For details, please visit [Trends/Readme/tests.csv](https://github.com/nychealth/coronavirus-data/blob/master/trends/Readme.md#testscsv) 
 
+### now-weekly-case-rate-age.csv, now-weekly-hosp-rate-age.csv, now-weekly-death-rate-age.csv
+These files contain weekly case, hospitalization, and death rates by age over the last 12 weeks. For details see [documentation at Trends](https://github.com/nychealth/coronavirus-data/tree/main/trends#weekly-case-rate-agecsv).
+
+### now-weekly-case-rate-race.csv, now-weekly-hosp-rate-race.csv, now-weekly-death-rate-race.csv
+These files contain weekly case, hospitalization, and death rates by race/ethnicity over the last 12 weeks. For details see [documentation at Trends](https://github.com/nychealth/coronavirus-data/tree/main/trends#weekly-case-rate-racecsv).
+
 ### pp-by-modzcta.csv 
 
 This file contains person-level information on molecular testing: the percentage of people tested who tested positive in the 7 days preceding the indicated “end date,” stratified by day and by three different geographies: citywide, borough, MODZCTA. The level of geography is indicated in each column heading.
 
-Please see the technical notes for a description of MODZCTA ([Geography: Zip codes and ZCTAs](https://github.com/nychealth/coronavirus-data#geography-zip-codes-and-zctas)), the different [types of COVID-19 laboratory tests](https://github.com/nychealth/coronavirus-data#laboratory-testing), and details on the [calculation of percent positivity](https://github.com/nychealth/coronavirus-data#calculation-of-percent-positivity). The data shown in this table are displayed by the date of specimen collection (i.e., when someone went to a healthcare provider for a test) for a molecular test.
+Please see the technical notes for a [description of MODZCTA](https://github.com/nychealth/coronavirus-data#geography), the different [types of COVID-19 laboratory tests](https://github.com/nychealth/coronavirus-data#laboratory-testing), and details on the [calculation of percent positivity](https://github.com/nychealth/coronavirus-data#calculation-of-percent-positivity). The data shown in this table are displayed by the date of specimen collection (i.e., when someone went to a healthcare provider for a test) for a molecular test.
 
 Unlike other data in this repository, this file excludes patients in congregate facilities, and people who previously tested positive, to better track community transmission.
+
+### 7day-transmission-rate.csv
+
+This file contains the rate of confirmed and probable cases per 100,000 people in the past 7 days, stratified by day and three different geographies: citywide, borough, and United Hospital Fund (UHF) neighborhood. The level of geography is indicated following the underscore (_) in each column heading. Please see the technical notes for a [description of UHF neighborhoods](https://github.com/nychealth/coronavirus-data#geography). This metric is designed to align with the [Centers for Disease Control and Prevention levels of tranmissions](https://covid.cdc.gov/covid-data-tracker/#county-view).
+
+Note that sum of counts in this file may not match values in citywide tables because of records with missing geographic information.
+
+### now-transmission-by-uhf42.csv
+
+This file contains the 7-day rate of confirmed and probable cases per 100,000 people, for the most recent day of data, by UHF24 (United Hospital Fund) neighborhood. 
