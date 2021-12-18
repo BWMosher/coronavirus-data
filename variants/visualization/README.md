@@ -1,14 +1,15 @@
 # Welcome to my folder of NYC Covid graphs
 
-## What is in this folder
+## What is in this repo
 
-- There's a human-readable data file called `../variant-epi-data-readable.csv`
+- There's a human-readable version of `../variant-epi-data-readable.csv` for each week since 2021-06-10 in `../history`
 	- It has the dates and total count sequenced (from `../cases-sequenced.csv`)
-- This folder called `visualization/` contains my files
-	- `visualization/all-weeks-plotted.p` plots all strains given in `../variant-epi-data-readable.csv`
+- This folder called `visualization/` contains plotting stuff, plots, gifs
+	- They're not updated weekly anymore, it's a few times a year now.
+	- `visualization/YYYY-MM-DD.p` plots all strains given in the data for the week ending on that date
 		- This is gnuplot code. [How to install gnuplot](https://www.google.com/search?q=gnuplot+installation+directions).
 		- It plots the strains in a stacked histogram.
-		- `visualization/all-weeks-plotted.png` is the resulting image.
+		- `visualization/YYYY-MM-DD.png` is the resulting image.
 		- Download it to view it or scroll down.
 	<!-- - `../visualization/four-weeks-plotted.p` makes a graph that highlights the four last weeks of data that the city is just lumping together on their public display. -->
 	<!-- - `visualization/ignored-strains.p` is a graph that uses the data before they eliminated strains that are not very prevalent. -->
@@ -18,19 +19,23 @@
   <!-- city display would look like if it were using a one week window instead of -->
   <!-- a four week window. **I haven't been updating this.** -->
 
-## Images (updated 2021-09-26)
+## Images (updated 2021-12-16)
 
-### The all strains graph from January 2nd to September 11th
+### The all strains graph from May to the 2021-12-16 report
 
-`all-weeks-plotted.png`
+`2021-12-16.png`
 
-![all-weeks-plotted.png](all-weeks-plotted.png)
+![2021-12-16.png](history/2021-12-16.png)
 
-<!-- ### The all strains graph animated for the last seven weeks, using percentage. -->
-<!-- Note: For the last few weeks, I have been calculating the percentages to several -->
-<!-- decimal points of precision that the city has been rounding off. -->
+### The all strains graph animated from 2021-07-03 to 2021-12-16
 
-<!-- ![animation.gif](history/2021-07-29-gif/2021-07-29.gif) -->
+Slower speed
+
+![animation.gif](animation.gif)
+
+Faster speed
+
+![faster-animation.gif](faster-animation.gif)
 
 <!-- ### The all strains graph animated for the last seven weeks, using counts. -->
 
@@ -48,11 +53,11 @@
 
 <!-- ![spoofs/last-1-week.png](spoofs/last-1-week.png) -->
 
-### The strains excluded from the data from June 10th (that we were previously monitoring)
+<!-- ### The strains excluded from the data from June 10th (that we were previously monitoring) -->
 
-`disregarded-variants-through-may23.png`
+<!-- `disregarded-variants-through-may23.png` -->
 
-![disregarded variants-through-may23.png](disregarded-variants-through-may23.png)
+<!-- ![disregarded variants-through-may23.png](disregarded-variants-through-may23.png) -->
 
 
-Do you have feedback or a visualization request? Open an issue or tweet me **@BWMosher**.
+Do you have feedback or a visualization request? Open an issue.
