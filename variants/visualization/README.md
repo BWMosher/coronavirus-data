@@ -37,6 +37,10 @@ Faster speed
 
 ![faster-animation.gif](faster-animation.gif)
 
+Fastest speed
+
+![fastest-animation.gif](fastest-animation.gif)
+
 <!-- ### The all strains graph animated for the last seven weeks, using counts. -->
 
 <!-- ![animation.gif](history/raw/2021-07-29/2021-07-29.gif) -->
