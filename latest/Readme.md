@@ -16,35 +16,42 @@ This folder contains files with data that focus on the most recent period of the
 
 ## Files 
 ### breakthrough-summary.csv
-This file contains cumulative counts and average weekly rates of cases, hospitalizations, and deaths by vaccination status,  since January 17, 2021. Data are updated on Thursdays containing data through the Saturday 12 days prior.
+This file contains cumulative counts and average weekly rates of cases, hospitalizations, and deaths by vaccination status,  since January 17, 2021. Data are updated on Thursdays containing data through the Saturday 12 days prior. As of 1/6/2022, data include children age 5-11 years.
 
 It includes the following definitions:
-- "Vaccinated" means people age 12 and over who are fully vaccinated at the time of case diagnosis: 14 days after the administration of the 2nd dose in a 2-dose series, or after the administration of a single-dose vaccine. 
-- "Unvaccinated" means people age 12 and over with no record of vaccination status.
+- "Vaccinated" means people age 5 and over who are fully vaccinated at the time of case diagnosis: 14 days after the administration of the 2nd dose in a 2-dose series, or after the administration of a single-dose vaccine. 
+- "Vaccinated, boosted" means people age 5 and over who have received a booster dose at the time of case diagnosis: 14 days after the administration of a booster dose following completion of their primary series (≥150 days for a 2-dose vaccine; ≥60 days for a single-dose vaccine).
+- "Unvaccinated" means people age 5 and over with no record of vaccination status.
 - Cases, hospitalization, and deaths: defined per this repository's common standards.
 - Rates are per 100,000 people. Hospitalization and death rates are age-adjusted. The denominator for average weekly rates for vaccinated people is the count of NYC residents recorded as fully vaccinated by the week of an event (case, hospitalization, or death) included in the rate; the denominator for unvaccinated people is the total city population minus the number of fully or partially vaccinated people  as of the week of event. 
 
 ### now-weekly-breakthrough.csv
-This file contains weekly counts and rates of cases and hospitalizations by vaccination status, and citywide. Data are updated on Thursdays containing data through the Saturday 12 days prior.
+This file contains weekly counts and rates of cases and hospitalizations by vaccination status, and citywide. Data are updated on Thursdays containing data through the Saturday 12 days prior. As of 1/6/2022, data from the week of 12/18/2021 onward include children age 5-11 years. Recent data may be incomplete due to delays in processing the surge in cases and linking to vaccination and hospitalization data.  
 
 Definitions of vaccinated and unvaccinated people are the same as for breakthrough-summary.csv.
 
 
 | Variable name          | Definition                                                                | Timeframe                                |
 |------------------------|---------------------------------------------------------------------------|------------------------------------------|
-| Week_of_diagnosis      | Week-ending date                                                          |                                          |
-| vax_case_count         | Count of cases diagnosed among fully vaccinated people                    | Full week preceding the week-ending date |
-| vax_case_rate          | Rate of cases diagnosed per 100,000 fully vaccinated people               | Full week preceding the week-ending date |
-| vax_hosp_count         | Count of hospitalizations among fully vaccinated people                   | Full week preceding the week-ending date |
-| vax_hosp_rate_adj      | Age-adjusted rate of hospitalizations per 100,000 fully vaccinated people | Full week preceding the week-ending date |
-| vax_death_count        | Count of deaths among fully vaccinated people                             | Full week preceding the week-ending date |
-| vax_death_rate_adj     | Age-adjusted rate of deaths per 100,000 fully vaccinated people           | Full week preceding the week-ending date |
-| unvax_case_count       | Count of cases diagnosed among unvaccinated people                        | Full week preceding the week-ending date |
-| unvax_case_rate        | Rate of cases diagnosed per 100,000 unvaccinated people                   | Full week preceding the week-ending date |
-| unvax_hosp_count       | Count of hospitalizations among unvaccinated people                       | Full week preceding the week-ending date |
-| unvax_hosp_rate_adj    | Age-adjusted rate of hospitalizations per 100,000 unvaccinated people     | Full week preceding the week-ending date |
-| unvax_death_count      | Count of deaths among unvaccinated people                                 | Full week preceding the week-ending date |
-| unvax_death_rate_adj   | Age-adjusted rate of deaths per 100,000 unvaccinated people               | Full week preceding the week-ending date |
+| Week of diagnosis      | Week-ending date                                                          |                                          |
+| Vaccinated + boosted case count         | Count of cases diagnosed among people vaccinated and boosted                    | Full week preceding the week-ending date |
+| Vaccinated +boosted case rate          | Rate of cases diagnosed per 100,000 people vaccinated and boosted               | Full week preceding the week-ending date |
+| Vaccinated + boosted hospitalized count         | Count of hospitalizations among people vaccinated and boosted                  | Full week preceding the week-ending date |
+| Vaccinated + boosted age-adjusted hospitalized rate      | Age-adjusted rate of hospitalizations per 100,000 people vaccinated and boosted | Full week preceding the week-ending date |
+| Vaccinated + boosted death count       | Count of deaths among people vaccinated and boosted                             | Full week preceding the week-ending date |
+| Vaccinated + boosted age-adjusted death rate     | Age-adjusted rate of deaths per 100,000 people vaccinated and boosted           | Full week preceding the week-ending date |
+| Vaccinated + unboosted case count         | Count of cases diagnosed among vaccinated people                    | Full week preceding the week-ending date |
+| Vaccinated + unboosted case rate          | Rate of cases diagnosed per 100,000 vaccinated people               | Full week preceding the week-ending date |
+| Vaccinated + unboosted hospitalized count         | Count of hospitalizations among vaccinated people                   | Full week preceding the week-ending date |
+| Vaccinated + unboosted age-adjuated hospitalized rate      | Age-adjusted rate of hospitalizations per 100,000 vaccinated people | Full week preceding the week-ending date |
+| Vaccinated + unboosted death count        | Count of deaths among vaccinated people                             | Full week preceding the week-ending date |
+| Vaccinated + unboosted age-adjusted death rate     | Age-adjusted rate of deaths per 100,000 vaccinated people           | Full week preceding the week-ending date |
+| Unvaccinated case count       | Count of cases diagnosed among unvaccinated people                        | Full week preceding the week-ending date |
+| Unvaccinated case rate        | Rate of cases diagnosed per 100,000 unvaccinated people                   | Full week preceding the week-ending date |
+| Unvaccinated hospitalized count       | Count of hospitalizations among unvaccinated people                       | Full week preceding the week-ending date |
+| Unvaccinated age-adjusted hospitalized rate    | Age-adjusted rate of hospitalizations per 100,000 unvaccinated people     | Full week preceding the week-ending date |
+| Unvaccinated death count      | Count of deaths among unvaccinated people                                 | Full week preceding the week-ending date |
+| Unvaccinated age-adjusted death rate   | Age-adjusted rate of deaths per 100,000 unvaccinated people               | Full week preceding the week-ending date |
 | citywide_case_rate     | Rate of cases diagnosed per 100,000 people citywide                       | Full week preceding the week-ending date |
 | citywide_hosp_rate_adj | Age-adjusted rate of hospitalizations per 100,000 people citywide         | Full week preceding the week-ending date |
 | citywide_death_rate_adj| Age-adjusted rate of deaths per 100,000 unvaccinated people citywide      | Full week preceding the week-ending date |
@@ -144,10 +151,10 @@ This file contains the same data as testing-by-age.csv, but limited to the most 
 This file contains the same data as tests.csv, but limited to the most recent 90 days. For details, please visit [Trends/Readme/tests.csv](https://github.com/nychealth/coronavirus-data/blob/master/trends/Readme.md#testscsv) 
 
 ### now-weekly-case-rate-age.csv, now-weekly-hosp-rate-age.csv, now-weekly-death-rate-age.csv
-These files contain weekly case, hospitalization, and death rates by age over the last 12 weeks. For details see [documentation at Trends](https://github.com/nychealth/coronavirus-data/tree/main/trends#weekly-case-rate-agecsv).
+These files contain weekly case, hospitalization, and death rates by age over the last 12 weeks. For details see [documentation at Trends](https://github.com/nychealth/coronavirus-data/blob/master/trends/Readme.md#weekly-case-rate-agecsv).
 
 ### now-weekly-case-rate-race.csv, now-weekly-hosp-rate-race.csv, now-weekly-death-rate-race.csv
-These files contain weekly case, hospitalization, and death rates by race/ethnicity over the last 12 weeks. For details see [documentation at Trends](https://github.com/nychealth/coronavirus-data/tree/main/trends#weekly-case-rate-racecsv).
+These files contain weekly case, hospitalization, and death rates by race/ethnicity over the last 12 weeks. For details see [documentation at Trends](https://github.com/nychealth/coronavirus-data/blob/master/trends/Readme.md#weekly-case-rate-racecsv).
 
 ### pp-by-modzcta.csv 
 
